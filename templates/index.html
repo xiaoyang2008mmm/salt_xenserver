@@ -24,7 +24,27 @@
       </div>
       <div data-id="collapseFour" id="collapseFour{{(i.split("."))[-1]}}" class="panel-collapse collapse">
          <div class="panel-body">
-                <pre>{{Xen_Data[i]}}</pre>
+<table class="table table-bordered table-condensed table-hover">
+   <thead>
+      <tr>
+         <th>标签</th>
+         <th>名称</th>
+      </tr>
+   </thead>
+   <tbody>
+
+    {% for x in (Xen_Data[i]).split("\n") %}
+     {%  set list=x.split("\n") %}
+      {% for y in list%}
+       {%set xen=y.split(":")%}
+      <tr class="active">
+          <td>{{xen[0]}}</td>
+          <td>{{xen[1]}}</td>
+      </tr>
+     {% end %} 
+    {% end %} 
+   </tbody>
+</table>
          </div>
       </div>
    </div>
