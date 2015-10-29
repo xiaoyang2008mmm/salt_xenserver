@@ -13,6 +13,7 @@ $(document).ready(function() {
     function() {
         var $action = "shutdown";
         var $this = $(this);
+        $(this).attr({"disabled":"disabled"});
         var $success = $this.closest('tbody').find('tr.success');
         var $warning = $this.closest('tbody').find('tr.warning');
         var index = $success.index($this.closest('tr.success')[0]);
@@ -32,6 +33,7 @@ $(document).ready(function() {
     function() {
         var $action = "start";
         var $this = $(this);
+        $(this).attr({"disabled":"disabled"});
         var $success = $this.closest('tbody').find('tr.success');
         var $warning = $this.closest('tbody').find('tr.warning');
         var index = $success.index($this.closest('tr.success')[0]);
@@ -53,6 +55,7 @@ $(document).ready(function() {
     function() {
         var $action = "reboot";
         var $this = $(this);
+        $(this).attr({"disabled":"disabled"});
         var $success = $this.closest('tbody').find('tr.success');
         var $warning = $this.closest('tbody').find('tr.warning');
         var index = $success.index($this.closest('tr.success')[0]);
