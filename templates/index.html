@@ -43,23 +43,23 @@
                  {% if id == 0 %}
                     <tr class="success">
                         {% set uuid=str((i.split("."))[-1])+"_"+str(data[0] + 1) %}
-                       <td>{{data[0] + 1}}###{{id}}</td>
+                       <td>{{data[0] + 1}}</td>
                        <td>{{xen[0]}}</td>
                        <td>{{xen[1]}} 
-                           <button type="button" class="btn btn-success" id="run_{{uuid}}">运行</button>
+                           <button type="button" class="btn btn-success" id="start_{{uuid}}">开起</button>
                            <button type="button" class="btn btn-danger" id="stop_{{uuid}}" >关闭</button>
                            <button type="button" class="btn btn-primary"id="reboot_{{uuid}}" >重启</button>
                        </td>
                        </tr>
                  {% elif id == 1 %}
                        <tr class="warning">
-                          <td>{{data[0] + 1}}###{{id}}</td>
+                          <td>{{data[0] + 1}}</td>
                           <td>{{xen[0]}}</td>
                           <td>{{xen[1]}}</td>
                        </tr>
                  {% elif id == 2 %}
                        <tr class="danger">
-                          <td>{{data[0] + 1}}###{{id}}</td>
+                          <td>{{data[0] + 1}}</td>
                           <td>{{xen[0]}}</td>
                           <td>{{xen[1]}}</td>
                        </tr>
