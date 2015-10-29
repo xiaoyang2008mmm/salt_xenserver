@@ -18,7 +18,6 @@ $(document).ready(function() {
         var index = $success.index($this.closest('tr.success')[0]);
         var $uuid = $warning.eq(index).find('td:nth-child(3)').text() ;
         var $xen_ip = $this.closest('.panel-info').find('a[data-toggle=collapse]').text().replace(/IP:/ig, '');
-          alert ($uuid + $xen_ip);
             $.post("/xen_operation/", {
                 uuid: $uuid,
                 xen_ip : $xen_ip,
@@ -38,7 +37,6 @@ $(document).ready(function() {
         var index = $success.index($this.closest('tr.success')[0]);
         var $uuid = $warning.eq(index).find('td:nth-child(3)').text() ;
         var $xen_ip = $this.closest('.panel-info').find('a[data-toggle=collapse]').text().replace(/IP:/ig, '');
-          alert ($uuid + $xen_ip);
             $.post("/xen_operation/", {
                 uuid: $uuid,
                 xen_ip : $xen_ip,
@@ -60,7 +58,6 @@ $(document).ready(function() {
         var index = $success.index($this.closest('tr.success')[0]);
         var $uuid = $warning.eq(index).find('td:nth-child(3)').text() ;
         var $xen_ip = $this.closest('.panel-info').find('a[data-toggle=collapse]').text().replace(/IP:/ig, '');
-          alert ($uuid + $xen_ip);
             $.post("/xen_operation/", {
                 uuid: $uuid,
                 xen_ip : $xen_ip,

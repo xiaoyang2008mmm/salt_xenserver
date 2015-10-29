@@ -33,6 +33,4 @@ class Xen_operation_Handler(BaseHandler):
         print self.request.arguments
         local = salt.client.LocalClient()
         result_json = local.cmd_async(xen_ip , 'cmd.run', ['xe vm-%s   vm=%s'%(action,uuid)])
-        print result_json
-
-        self.write(self.request.arguments)
+        self.write('%s成功'%action)
