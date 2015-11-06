@@ -52,7 +52,7 @@ def main():
     parse_command_line()
     http_server = tornado.httpserver.HTTPServer(Application())
     http_server.listen(options.port)
-    tornado.ioloop.PeriodicCallback(get_push_vm_list, 300000).start()  #5分钟
+    tornado.ioloop.PeriodicCallback(get_push_vm_list, 3600000).start()  #60分钟
     tornado.ioloop.IOLoop.instance().start()
 
 
